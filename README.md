@@ -42,10 +42,10 @@ package.json
 
 
 ---
-
 ## ⚙️ Setup & Run (Development)
 
 ### 1️⃣ Backend (ASP.NET Core)
+
 **Prerequisites**
 - .NET 6 SDK or later
 - SQL Server LocalDB or any SQL Server instance
@@ -56,26 +56,26 @@ cd BackendProject/universty\ dental\ clinical
 dotnet restore
 dotnet ef database update
 dotnet run
+
 By default, runs at: https://localhost:7086
 
 Note: Move sensitive configs (ConnectionString, JWT Key) from appsettings.json to User Secrets.
 
-###2️⃣ Frontend (Angular)
-**Prerequisites**
+
+2️⃣ Frontend (Angular)
+Prerequisites
+
 Node.js 18+
+
 Angular CLI (npm install -g @angular/cli)
 
-**Steps**
-```bash
+Steps
 cd frontend/clinic
 npm install
 ng serve --open
 Runs at: http://localhost:4200
 
 🔗 Connecting Frontend to Backend
-Edit:
-
-ts
 // src/environment.ts
 export const environment = {
     baseUrl: "https://localhost:7086"
@@ -85,21 +85,18 @@ Change baseUrl for production builds.
 🚀 Production Build
 Frontend
 
-bash
-Copy
-Edit
 cd frontend/clinic
 ng build --configuration production
-Output in dist/clinic/.
+Output will be in: dist/clinic/
 
 Backend
 
-bash
 dotnet publish -c Release
 Deploy to IIS, Azure, Docker, etc.
 
 🛠 Recommended Improvements Before Deployment
 Backend
+
 Use User Secrets or environment variables for DB connection & JWT Key.
 
 Add [Authorize] attributes for role-based access.
@@ -111,6 +108,7 @@ builder.Services.AddCors(o => o.AddPolicy("AllowFrontend",
 ...
 app.UseCors("AllowFrontend");
 Frontend
+
 Add AuthGuard to protect routes.
 
 Add HttpInterceptor to attach JWT token automatically.
