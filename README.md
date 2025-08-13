@@ -60,16 +60,13 @@ By default, runs at: https://localhost:7086
 
 Note: Move sensitive configs (ConnectionString, JWT Key) from appsettings.json to User Secrets.
 
-2️⃣ Frontend (Angular)
-Prerequisites
-
+###2️⃣ Frontend (Angular)
+**Prerequisites**
 Node.js 18+
-
 Angular CLI (npm install -g @angular/cli)
 
-Steps
-
-bash
+**Steps**
+```bash
 cd frontend/clinic
 npm install
 ng serve --open
