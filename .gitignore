@@ -1,0 +1,88 @@
+##########################
+#   BACKEND (ASP.NET)    #
+##########################
+
+# Build results
+bin/
+obj/
+.vs/
+[Bb]uild[Ll]og.*
+[Ll]og/
+[Ll]ogs/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Secrets & config
+appsettings.*.json
+!appsettings.json   # نسخة آمنة بدون أسرار
+secrets.json
+
+# Logs
+*.log
+
+# DB files
+*.mdf
+*.ldf
+*.ndf
+
+# Other generated
+Generated\ Files/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+ScaffoldingReadMe.txt
+*.pdb
+*.tmp
+*.cache
+
+##########################
+#   FRONTEND (Angular)   #
+##########################
+
+# Compiled output
+dist/
+tmp/
+out-tsc/
+bazel-out/
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Angular cache
+.angular/cache/
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Misc
+.sass-cache/
+connect.lock
+coverage/
+libpeerconnection.log
+testem.log
+typings/
+.history/
+
+# System files
+.DS_Store
+Thumbs.db
